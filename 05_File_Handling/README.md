@@ -7,200 +7,201 @@
     - "fs" stands for File-System.
 
 ## Methods provided by fs module foe handling the files : 
-    appendFile: [Function: appendFile],
 
-    appendFileSync: [Function: appendFileSync],
+1. `appendFile`: Appends data to a file, creating the file if it does not exist.
 
-    access: [Function: access],
+2. `appendFileSync`: Synchronously appends data to a file, creating the file if it does not exist.
 
-    accessSync: [Function: accessSync],
+3. `access`: Checks the accessibility of a file or directory.
 
-    chown: [Function: chown],
+4. `accessSync`: Synchronously checks the accessibility of a file or directory.
 
-    chownSync: [Function: chownSync],
+5. `chown`: Changes the owner and group of a file.
 
-    chmod: [Function: chmod],
+6. `chownSync`: Synchronously changes the owner and group of a file.
 
-    chmodSync: [Function: chmodSync],
+7. `chmod`: Changes the permissions of a file.
 
-    close: [Function: close],
+8. `chmodSync`: Synchronously changes the permissions of a file.
 
-    closeSync: [Function: closeSync],
+9. `close`: Closes a file descriptor.
 
-    copyFile: [Function: copyFile],
+10. `closeSync`: Synchronously closes a file descriptor.
 
-    copyFileSync: [Function: copyFileSync],
+11. `copyFile`: Copies a file to a new location.
 
-    cp: [Function: cp],
+12. `copyFileSync`: Synchronously copies a file to a new location.
 
-    cpSync: [Function: cpSync],
+13. `cp`: Copies files or directories, including subdirectories.
 
-    createReadStream: [Function: createReadStream],
+14. `cpSync`: Synchronously copies files or directories, including subdirectories.
 
-    createWriteStream: [Function: createWriteStream],
+15. `createReadStream`: Creates a readable stream to read data from a file.
 
-    exists: [Function: exists],
+16. `createWriteStream`: Creates a writable stream to write data to a file.
 
-    existsSync: [Function: existsSync],
+17. `exists`: Checks if a file or directory exists (deprecated in favor of `fs.access`).
 
-    fchown: [Function: fchown],
+18. `existsSync`: Synchronously checks if a file or directory exists.
 
-    fchownSync: [Function: fchownSync],
+19. `fchown`: Changes the owner and group of an open file.
 
-    fchmod: [Function: fchmod],
+20. `fchownSync`: Synchronously changes the owner and group of an open file.
 
-    fchmodSync: [Function: fchmodSync],
+21. `fchmod`: Changes the permissions of an open file.
 
-    fdatasync: [Function: fdatasync],
+22. `fchmodSync`: Synchronously changes the permissions of an open file.
 
-    fdatasyncSync: [Function: fdatasyncSync],
+23. `fdatasync`: Synchronizes a file's in-core state with storage device.
 
-    fstat: [Function: fstat],
+24. `fdatasyncSync`: Synchronously synchronizes a file's in-core state with storage device.
 
-    fstatSync: [Function: fstatSync],
+25. `fstat`: Retrieves the status of an open file.
 
-    fsync: [Function: fsync],
+26. `fstatSync`: Synchronously retrieves the status of an open file.
 
-    fsyncSync: [Function: fsyncSync],
+27. `fsync`: Flushes all modified file data to the disk.
 
-    ftruncate: [Function: ftruncate],
+28. `fsyncSync`: Synchronously flushes all modified file data to the disk.
 
-    ftruncateSync: [Function: ftruncateSync],
+29. `ftruncate`: Truncates an open file to a specified length.
 
-    futimes: [Function: futimes],
+30. `ftruncateSync`: Synchronously truncates an open file to a specified length.
 
-    futimesSync: [Function: futimesSync],
+31. `futimes`: Changes the timestamps of an open file.
 
-    lchown: [Function: lchown],
+32. `futimesSync`: Synchronously changes the timestamps of an open file.
 
-    lchownSync: [Function: lchownSync],
+33. `lchown`: Changes the owner and group of a symbolic link.
 
-    lchmod: undefined,
+34. `lchownSync`: Synchronously changes the owner and group of a symbolic link.
 
-    lchmodSync: undefined,
+35. `lchmod`: Changes the permissions of a symbolic link (not supported on all platforms).
 
-    link: [Function: link],
+36. `lchmodSync`: Synchronously changes the permissions of a symbolic link (not supported on all platforms).
 
-    linkSync: [Function: linkSync],
+37. `link`: Creates a new hard link to a file.
 
-    lstat: [Function: lstat],
+38. `linkSync`: Synchronously creates a new hard link to a file.
 
-    lstatSync: [Function: lstatSync],
+39. `lstat`: Retrieves the status of a file or symbolic link.
 
-    lutimes: [Function: lutimes],
+40. `lstatSync`: Synchronously retrieves the status of a file or symbolic link.
 
-    lutimesSync: [Function: lutimesSync],
+41. `lutimes`: Changes the timestamps of a symbolic link.
 
-    mkdir: [Function: mkdir],
+42. `lutimesSync`: Synchronously changes the timestamps of a symbolic link.
 
-    mkdirSync: [Function: mkdirSync],
+43. `mkdir`: Creates a new directory.
 
-    mkdtemp: [Function: mkdtemp],
+44. `mkdirSync`: Synchronously creates a new directory.
 
-    mkdtempSync: [Function: mkdtempSync],
+45. `mkdtemp`: Creates a unique temporary directory.
 
-    open: [Function: open],
+46. `mkdtempSync`: Synchronously creates a unique temporary directory.
 
-    openSync: [Function: openSync],
+47. `open`: Opens a file descriptor.
 
-    openAsBlob: [Function: openAsBlob],
+48. `openSync`: Synchronously opens a file descriptor.
 
-    readdir: [Function: readdir],
+49. `openAsBlob`: Opens a file as a Blob (Browser-specific).
 
-    readdirSync: [Function: readdirSync],
+50. `readdir`: Reads the contents of a directory.
 
-    read: [Function: read],
+51. `readdirSync`: Synchronously reads the contents of a directory.
 
-    readSync: [Function: readSync],
+52. `read`: Reads data from a file descriptor.
 
-    readv: [Function: readv],
+53. `readSync`: Synchronously reads data from a file descriptor.
 
-    readvSync: [Function: readvSync],
+54. `readv`: Reads data from a file descriptor into multiple buffers.
 
-    readFile: [Function: readFile],
+55. `readvSync`: Synchronously reads data from a file descriptor into multiple buffers.
 
-    readFileSync: [Function: readFileSync],
+56. `readFile`: Reads the entire contents of a file.
 
-    readlink: [Function: readlink],
+57. `readFileSync`: Synchronously reads the entire contents of a file.
 
-    readlinkSync: [Function: readlinkSync],
+58. `readlink`: Resolves the target of a symbolic link.
 
-    realpath: [Function: realpath] { native: [Function (anonymous)] },
+59. `readlinkSync`: Synchronously resolves the target of a symbolic link.
 
-    realpathSync: [Function: realpathSync] { native: [Function (anonymous)] },
+60. `realpath`: Resolves the absolute path of a file.
 
-    rename: [Function: rename],
+61. `realpathSync`: Synchronously resolves the absolute path of a file.
 
-    renameSync: [Function: renameSync],
+62. `rename`: Renames a file or directory.
 
-    rm: [Function: rm],
+63. `renameSync`: Synchronously renames a file or directory.
 
-    rmSync: [Function: rmSync],
+64. `rm`: Removes files or directories.
 
-    rmdir: [Function: rmdir],
+65. `rmSync`: Synchronously removes files or directories.
 
-    rmdirSync: [Function: rmdirSync],
+66. `rmdir`: Removes a directory.
 
-    stat: [Function: stat],
+67. `rmdirSync`: Synchronously removes a directory.
 
-    statfs: [Function: statfs],
+68. `stat`: Retrieves the status of a file.
 
-    statSync: [Function: statSync],
+69. `statfs`: Retrieves filesystem statistics.
 
-    statfsSync: [Function: statfsSync],
+70. `statSync`: Synchronously retrieves the status of a file.
 
-    symlink: [Function: symlink],
+71. `statfsSync`: Synchronously retrieves filesystem statistics.
 
-    symlinkSync: [Function: symlinkSync],
+72. `symlink`: Creates a new symbolic link.
 
-    truncate: [Function: truncate],
+73. `symlinkSync`: Synchronously creates a new symbolic link.
 
-    truncateSync: [Function: truncateSync],
+74. `truncate`: Truncates a file to a specified length.
 
-    unwatchFile: [Function: unwatchFile],
+75. `truncateSync`: Synchronously truncates a file to a specified length.
 
-    unlink: [Function: unlink],
+76. `unwatchFile`: Stops watching for changes on a file.
 
-    unlinkSync: [Function: unlinkSync],
+77. `unlink`: Removes a file or symbolic link.
 
-    utimes: [Function: utimes],
+78. `unlinkSync`: Synchronously removes a file or symbolic link.
 
-    utimesSync: [Function: utimesSync],
+79. `utimes`: Changes the timestamps of a file.
 
-    watch: [Function: watch],
+80. `utimesSync`: Synchronously changes the timestamps of a file.
 
-    watchFile: [Function: watchFile],
+81. `watch`: Watches for changes on a file or directory.
 
-    writeFile: [Function: writeFile],
+82. `watchFile`: Watches a file for changes.
 
-    writeFileSync: [Function: writeFileSync],
+83. `writeFile`: Writes data to a file, replacing the file if it already exists.
 
-    write: [Function: write],
+84. `writeFileSync`: Synchronously writes data to a file, replacing the file if it already exists.
 
-    writeSync: [Function: writeSync],
+85. `write`: Writes data to a file descriptor.
 
-    writev: [Function: writev],
+86. `writeSync`: Synchronously writes data to a file descriptor.
 
-    writevSync: [Function: writevSync],
+87. `writev`: Writes data from multiple buffers to a file descriptor.
 
-    Dirent: [class Dirent],
+88. `writevSync`: Synchronously writes data from multiple buffers to a file descriptor.
 
-    Stats: [Function: Stats],
+89. `Dirent`: Represents a directory entry.
 
-    ReadStream: [Getter/Setter],
+90. `Stats`: Represents file status information.
 
-    WriteStream: [Getter/Setter],
+91. `ReadStream`: Represents a readable stream for a file.
 
-    FileReadStream: [Getter/Setter],
+92. `WriteStream`: Represents a writable stream for a file.
 
-    FileWriteStream: [Getter/Setter],
+93. `FileReadStream`: Represents a file's readable stream (deprecated).
 
-    _toUnixTimestamp: [Function: toUnixTimestamp],
+94. `FileWriteStream`: Represents a file's writable stream (deprecated).
 
-    Dir: [class Dir],
+95. `_toUnixTimestamp`: Converts a date to a Unix timestamp.
 
-    opendir: [Function: opendir],
+96. `Dir`: Represents a directory handle.
 
-    opendirSync: [Function: opendirSync]
+97. `opendir`: Opens a directory for reading.
 
-__NOTE :__ Refer [index.js]("05_File_Handling/index.js") file to see the examples of few commonly used methods among the list of above mentioned methods.
+98. `opendirSync`: Synchronously opens a directory for reading.
+
+__NOTE :__ Refer index.js file to see the examples of few commonly used methods among the list of above mentioned methods.
