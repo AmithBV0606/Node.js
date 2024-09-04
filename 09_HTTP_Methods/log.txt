@@ -1,0 +1,5 @@
+A request received on / at 1725452768787 Method: GET
+A request received on /about at 1725452847182 Method: GET
+A request received on /about?myName=Amith&id=1 at 1725452862711 Method: GET
+A request received on /about?myName=Amith&id=1 at 1725453459208 Method: GET
+A request received on /signup at 1725453469421 Method: GET

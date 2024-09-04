@@ -1,0 +1,16 @@
+{
+  "name": "09_http_methods",
+  "version": "1.0.0",
+  "description": "__NOTE :__ GET is the default request which will be sent automatically when the website is loaded for the first time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "url": "^0.11.4"
+  }
+}
