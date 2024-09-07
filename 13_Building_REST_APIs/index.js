@@ -1,8 +1,12 @@
 const express = require("express");
 const users = require("./FakeData.json");
+const fs = require("fs");
 
 const app = express();
 const port = 8000;
+
+// Middleware - Plugin
+app.use(express.urlencoded({ extended: false }));
 
 // Routes
 
@@ -36,22 +40,53 @@ app.get("/api/users/:id", (req, res) => {
 });
 // Note : can use find method instead of filter.
 
+// Since we cannot send Post, Patch and Delete request from browser we use postman.
+
 // 5) POST /api/users - Create new user.
 app.post("/api/users/", (req, res) => {
-    // TODO : Create new user
-    return res.json({ status: "pending" });
+    const body = req.body;
+    // console.log(body);
+    users.push({
+        "id": users.length + 1,
+        "first_name": body.first_name,
+        "last_name": body.last_name,
+        "email": body.email,
+        "gender": body.gender,
+        "job_title": body.job_title
+    });
+
+    fs.writeFile("./FakeData.json", JSON.stringify(users), (err, data) => {
+        return res.json({ status: "success" });
+    });
 });
 
 // 6) PATCH /api/users/1 - Edit the user with ID 1.
 app.patch("/api/users/:id", (req, res) => {
-    // TODO : Edit the user with id
-    return res.json({ status: "pending" });
+    const id = parseInt(req.params.id);
+    const user = users.filter((item) => {
+        return (id === item.id);
+    });
+
+    const body = {...req.body, id: id};
+    
+    // Updating the JSON data
+    users.splice(users.indexOf(user[0]), user.length, body);
+
+    fs.writeFile("./FakeData.json", JSON.stringify(users), (err, data) => {
+        return res.json({ status: "success" });
+    });
 });
 
 // 7) DELETE /api/users/1 - Delete the user with ID 1.
 app.delete("/api/users/:id", (req, res) => {
-    // TODO : Delete the user with id
-    return res.json({ status: "pending" });
+    const id = parseInt(req.params.id);
+    const user = users.filter((item) => {
+        return (id !== item.id);
+    });
+
+    fs.writeFile("./FakeData.json", JSON.stringify(user), (err, data) => {
+        return res.json({ status: "success" });
+    });
 });
 
 app.listen(port);
