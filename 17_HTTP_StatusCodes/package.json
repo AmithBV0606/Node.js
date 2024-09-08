@@ -1,0 +1,15 @@
+{
+  "name": "17_http_statuscodes",
+  "version": "1.0.0",
+  "description": "HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
